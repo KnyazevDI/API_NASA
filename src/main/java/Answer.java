@@ -34,8 +34,5 @@ public class Answer {
         return url;
     }
 
-    public String getSave() {
-        String[] save = url.split("/");
-        return save[save.length-1];
-    }
+
 }

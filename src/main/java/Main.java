@@ -35,15 +35,21 @@ public class Main {
                 }
         );
 
-        HttpGet request2 = new HttpGet(answer.getUrl());
+        String newRemoteUrl = answer.getUrl();
+        HttpGet request2 = new HttpGet(newRemoteUrl);
         CloseableHttpResponse response2 = httpClient.execute(request2);
 
-        FileOutputStream fos = new FileOutputStream("D://" + answer.getSave());
+        FileOutputStream fos = new FileOutputStream("D://" + getSaveName(newRemoteUrl));
             HttpEntity entity = response2.getEntity();
             entity.writeTo(fos);
 
         } catch (IOException ex) {
             out.println(ex.getMessage());
         }
+    }
+
+    private static String getSaveName(String newRemoteUrl) {
+        String[] saveName = newRemoteUrl.split("/");
+        return saveName[saveName.length-1];
     }
 }
