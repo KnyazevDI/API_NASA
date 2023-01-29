@@ -5,8 +5,8 @@ public class Answer {
     protected String date;
     protected String explanation;
     protected String hdurl;
-    protected String media_type;
-    protected String service_version;
+    protected String mediaType;
+    protected String serviceVersion;
     protected String title;
     protected String url;
 
@@ -15,8 +15,8 @@ public class Answer {
             @JsonProperty("date") String date,
             @JsonProperty("explanation") String explanation,
             @JsonProperty("hdurl") String hdurl,
-            @JsonProperty("media_type") String media_type,
-            @JsonProperty("service_version") String service_version,
+            @JsonProperty("media_type") String mediaType,
+            @JsonProperty("service_version") String serviceVersion,
             @JsonProperty("title") String title,
             @JsonProperty("url") String url
     ) {
@@ -24,8 +24,8 @@ public class Answer {
         this.date = date;
         this.explanation = explanation;
         this.hdurl = hdurl;
-        this.media_type = media_type;
-        this.service_version = service_version;
+        this.mediaType = mediaType;
+        this.serviceVersion = serviceVersion;
         this.title = title;
         this.url = url;
     }
